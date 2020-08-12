@@ -1,0 +1,15 @@
+PORT=3002
+UPLOADS=/usr/src/app/uploads/
+SCHEMES=http, https
+BASEPATH=/api/v1
+NODE_ENV=development
+PAGE_LIMIT=20
+MONGO_URI=mongodb://devadmin:Password@mongo-0,mongo-1,mongo-2/users_service?replicaSet=MainRepSet&retryWrites=true&w=majority&authSource=admin
+PASSWORD=
+CLAIM_TOKEN_USERNAME=CRVS-QT
+CLAIM_TOKEN_PASSWORD=
+NIDA_BASE_URL=https://onlineauthentication.nida.gov.rw
+KEYPHRASE=
+META_MICROSERVICE_URL=http://metadata-apis:3000
+NOTIFICATION_URL=http://notification-service:3003
+NIN_BASE_URL=http://nin-service:3005
