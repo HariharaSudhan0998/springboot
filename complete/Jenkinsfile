@@ -17,24 +17,23 @@ pipeline {
    }
     stage('Code Quality') {
      steps {	    	    
-            /*withSonarQubeEnv('sonarqube') {
+            withSonarQubeEnv('sonarqube') {
 		     sh """ 
 		         mvn clean install
                         mvn sonar:sonar \
-                            -Dsonar.projectKey=sonarqube \
-                            -Dsonar.host.url=http://65.2.108.33:9000 \
-                            -Dsonar.login=e65c467df6a15882744b77ecf78f771e49b6c1af \
-			    -Xmx1024m -Xms512m
+                          -Dsonar.projectKey=sonarqube1 \
+                          -Dsonar.host.url=http://65.2.108.33:9000 \
+                          -Dsonar.login=eddc17c6929a3401c0f774a0d24563c7419106b7
                        """ 
-		        } */
+		        } 
         
         echo 'Code Quality...'
 	}
    }
     stage('Artifact Push') {
      steps {	          
-	      sh(script: 'mvn  -version')
-              sh(script: 'mvn   deploy')
+	     // sh(script: 'mvn  -version')
+              //sh(script: 'mvn   deploy')
 	     // sh(script: 'mvn clean install deploy -P release')
 	   /*  nexusArtifactUploader artifacts: [
 		                      [ 
