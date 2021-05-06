@@ -33,6 +33,18 @@
         </dependency>
         <!-- end::tests[] -->
     </dependencies>
+    
+    <distributionManagement>
+		 <snapshotRepository>
+		    <id>nexus</id>
+		    <url>http://ec2-65-1-231-149.ap-south-1.compute.amazonaws.com:8081/repository/Simpleapp-releasesd/</url>
+		 </snapshotRepository>
+					
+		<repository>
+		    <id>nexus-releases</id>	          
+		    <url>http://65.1.231.149:8081/repository/Simpleapp-release</url>
+		</repository>
+  	</distributionManagement>
 
     <properties>
         <java.version>1.8</java.version>
